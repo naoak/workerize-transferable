@@ -1,5 +1,7 @@
 # workerize-transferable
 
+[![Build Status](https://travis-ci.com/naoak/workerize-transferable.svg?branch=master)](https://travis-ci.com/naoak/workerize-transferable)
+
 > Helper functions for workerlize-loader to support transferables.
 
 ## Install
