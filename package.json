@@ -3,6 +3,7 @@
   "version": "0.0.2",
   "description": "Helper functions for workerlize-loader to support transferables",
   "main": "lib/index.js",
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "clean": "rimraf coverage lib",
