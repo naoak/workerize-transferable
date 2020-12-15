@@ -5,9 +5,17 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
-    "clean": "rimraf lib",
+    "clean": "rimraf coverage lib",
     "test": "npm run build && karmatic"
   },
+  "keywords": [
+    "webpack",
+    "loader",
+    "worker",
+    "web worker",
+    "transferable",
+    "workerize-loader"
+  ],
   "author": "Naoaki Yamada",
   "license": "MIT",
   "devDependencies": {
