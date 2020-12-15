@@ -1,4 +1,4 @@
-import { MESSAGE_TYPE_RPC_TRANSFERABLE } from './message-types';
+import { MESSAGE_TYPE_RPC_TRANSFERABLE } from './message-types.js';
 
 /** Options for worker method result */
 export type WorkerMethodResultOptions = {

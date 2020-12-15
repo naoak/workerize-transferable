@@ -1,4 +1,4 @@
-import { MESSAGE_TYPE_RPC_TRANSFERABLE } from './message-types';
+import { MESSAGE_TYPE_RPC_TRANSFERABLE } from './message-types.js';
 
 type Resolve = (value?: unknown) => void;
 type Reject = (reason?: any) => void;
