@@ -60,4 +60,4 @@ setupTransferableMethodsOnMain({
 })();
 ```
 
-See [workerze-loader](https://github.com/developit/workerize-loader) for details how to setup workerize-loader.
+See [workerize-loader](https://github.com/developit/workerize-loader) for details how to setup workerize-loader.
