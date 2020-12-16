@@ -45,8 +45,8 @@ setupTransferableMethodsOnWorker({
   },
   incrementC: {
     fn: incrementC
-	},
-	throwError: {
-		fn: throwError
-	}
+  },
+  throwError: {
+    fn: throwError
+  }
 });
