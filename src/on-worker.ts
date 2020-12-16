@@ -1,4 +1,5 @@
 import { MESSAGE_TYPE_RPC_TRANSFERABLE } from './message-types.js';
+import { getGlobalThis } from './util.js';
 
 /** Options for worker method result */
 export type WorkerMethodResultOptions = {
@@ -16,7 +17,8 @@ export type WorkerMethodResultOptions = {
 export function setupTransferableMethodsOnWorker(methods: {
   [x: string]: WorkerMethodResultOptions;
 }) {
-  globalThis.addEventListener('message', e => {
+  const globals = getGlobalThis();
+  globals.addEventListener('message', e => {
     const { type, method, id, params } = e.data;
     let opts: WorkerMethodResultOptions;
     let p: Promise<any>;
@@ -27,7 +29,7 @@ export function setupTransferableMethodsOnWorker(methods: {
         p = Promise.reject('No such method');
       }
       p.then(result => {
-        globalThis.postMessage(
+        globals.postMessage(
           { type: MESSAGE_TYPE_RPC_TRANSFERABLE, id, result },
           opts.pickTransferablesFromResult ? opts.pickTransferablesFromResult(result) : []
         );
@@ -38,7 +40,7 @@ export function setupTransferableMethodsOnWorker(methods: {
           error.stack = e.stack;
           error.name = e.name;
         }
-        globalThis.postMessage({
+        globals.postMessage({
           type: MESSAGE_TYPE_RPC_TRANSFERABLE,
           id,
           error

@@ -2,12 +2,10 @@ import Worker from 'workerize-loader?ready&name=test!./fixtures/transferable.wor
 import { setupTransferableMethodsOnMain } from '../lib';
 
 describe('worker', () => {
-  const fn = setupTransferableMethodsOnMain;
-
   describe('setupTransferableMethodsOnMain() on main, setupTransferableMethodsOnWorker() on worker', () => {
     it('should transfer the buffer ownerships (A [clone, clone], B [transfer, transfer], C [transfer, clone])', async () => {
       const worker = Worker();
-      fn(worker, {
+      setupTransferableMethodsOnMain(worker, {
         incrementB: {
           pickTransferablesFromParams: (params) => [
             params[0].buffer
@@ -48,7 +46,7 @@ describe('worker', () => {
 
     it('should transfer the buffer ownerships (A [clone, clone], B [clone, transfer], C [clone, clone]', async () => {
       const worker = Worker();
-      fn(worker, {
+      setupTransferableMethodsOnMain(worker, {
         incrementB: {},
         incrementC: {}
       });
@@ -85,7 +83,7 @@ describe('worker', () => {
   describe('errors', () => {
     it('worker.throwError() should pass the Error back to the application context', async () => {
       const worker = Worker();
-      fn(worker, {
+      setupTransferableMethodsOnMain(worker, {
         throwError: {}
       });
       try {
@@ -98,7 +96,7 @@ describe('worker', () => {
 
     it('worker.throwError() should pass the Error back to the application context', async () => {
       const worker = Worker();
-      fn(worker, {
+      setupTransferableMethodsOnMain(worker, {
         throwError: {}
       });
       try {
