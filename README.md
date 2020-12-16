@@ -7,7 +7,8 @@
 ## Install
 
 ```sh
-npm install -D workerize-loader @naoak/workerize-transferable
+npm i -D workerize-loader
+npm i -S @naoak/workerize-transferable
 ```
 
 ### Usage
