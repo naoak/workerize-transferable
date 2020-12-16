@@ -7,6 +7,12 @@
 <!-- ### Fixed -->
 <!-- ### Removed -->
 
+## [0.0.5] - 2020-12-16
+### Added
+- Added getGlobalThis().
+### Fixed
+- Not use globalThis.
+
 ## [0.0.4] - 2020-12-16
 ### Fixed
 - Set pickTransferablesFromParams() and pickTransferablesFromParams() as optional.
