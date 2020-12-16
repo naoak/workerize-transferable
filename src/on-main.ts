@@ -6,7 +6,7 @@ type Reject = (reason?: any) => void;
 /** Options for worker method params */
 export type WorkerMethodParamsOptions = {
   /** pick transferables from method params */
-  pickTransferablesFromParams: (params: any) => any[];
+  pickTransferablesFromParams?: (params: any) => any[];
 };
 
 /**

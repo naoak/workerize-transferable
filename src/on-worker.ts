@@ -6,7 +6,7 @@ export type WorkerMethodResultOptions = {
   fn: (...params: any[]) => any;
 
   /** pick transferables from method result */
-  pickTransferablesFromResult: (result: any) => any[];
+  pickTransferablesFromResult?: (result: any) => any[];
 };
 
 /**
