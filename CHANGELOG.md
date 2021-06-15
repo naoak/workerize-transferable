@@ -7,6 +7,10 @@
 <!-- ### Fixed -->
 <!-- ### Removed -->
 
+## [0.0.6] - 2021-06-15
+### Added
+- Supported NetworkError like errors
+
 ## [0.0.5] - 2020-12-16
 ### Added
 - Added getGlobalThis().
