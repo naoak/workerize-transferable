@@ -1,6 +1,6 @@
 {
   "name": "@naoak/workerize-transferable",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Helper functions for workerlize-loader to support transferables",
   "main": "lib/index.js",
   "type": "module",
