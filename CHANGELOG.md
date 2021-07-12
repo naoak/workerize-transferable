@@ -7,6 +7,10 @@
 <!-- ### Fixed -->
 <!-- ### Removed -->
 
+## [0.1.0] - 2021-07-12
+### Fixed
+- Fixed cloneable errors in Safari
+
 ## [0.0.6] - 2021-06-15
 ### Added
 - Supported NetworkError like errors
