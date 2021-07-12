@@ -34,7 +34,14 @@ export function setupTransferableMethodsOnWorker(methods: {
           opts.pickTransferablesFromResult ? opts.pickTransferablesFromResult(result) : []
         );
       }).catch(e => {
-        const error: any = { message: e };
+        let message;
+        try {
+          message = e.message.toString();
+        }
+        catch (ex) {
+          message = null;
+        }
+        const error: any = { message };
         if (e.stack) {
           error.stack = e.stack;
           error.name = e.name;
